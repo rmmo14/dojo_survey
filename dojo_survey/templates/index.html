@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <form action="/result" method="POST">
+        {% csrf_token %}
+        <p>
+            Your Name:
+            <input name="name" type=" text ">
+        </p>
+        <p>
+            Dojo Location:
+            <select name="location">
+                <option value="Arlington">Arlington</option>
+                <option value="Bellevue">Bellevue</option>
+                <option value="Boise">Boise</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Dallas">Dallas</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Oakland">Oakland</option>
+                <option value="Online">Online</option>
+                <option value="Orange County">Orange County</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Tulsa">Tulsa</option>
+            </select>
+        </p>
+        <p>
+            Favorite Language:
+            <select name="proglanguage">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="Mern">Mern</option>
+                <option value="Java">Java</option>
+                <option value="C#">C #</option>
+                <option value="C#++">C++</option>
+                <option value="Latex">LaTex</option>
+                <option value="Markdown">Markdown</option>
+                <option value="Other">Other</option>
+            </select>
+        </p>
+        <p>
+            Laptop Used:
+            <input type="radio" name="laptop" value="Mac">
+            <label for="Mac">Mac</label>
+            <input type="radio" name="laptop" value="Windows">
+            <label for="Windows">Windows</label>
+            <input type="radio" name="laptop" value="Linux">
+            <label for="Linux">Linux</label>
+            <input type="radio" name="laptop" value="None">
+            <label for="None">None</label>
+        </p>
+        <p>
+            Which of the following follow the rule, "at least 5":
+            <input type="checkbox" name="math" value="4">
+            <label for="4">4</label>
+            <input type="checkbox" name="math" value="9">
+            <label for="9">9</label>
+            <input type="checkbox" name="math" value="1">
+            <label for="1">1</label>
+            <input type="checkbox" name="math" value="5">
+            <label for="5">5</label>
+            <input type="checkbox" name="math" value="3">
+            <label for="3">3</label>
+        </p>
+        <p>
+            Comment (optional):
+        </p>
+        <textarea name="comment" cols="30" rows="10"></textarea>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
