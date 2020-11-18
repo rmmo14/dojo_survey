@@ -11,22 +11,22 @@
 
 <body>
     <p>
-        Name: {{name}}
+        Name: {{request.session.name}}
     </p>
     <p>
-        Dojo Location: {{location}}
+        Dojo Location: {{request.session.location}}
     </p>
     <p>
-        Favorite Language: {{proglanguage}}
+        Favorite Language: {{request.session.proglanguage}}
     </p>
     <p>
-        Laptop Used: {{laptop}}
+        Laptop Used: {{request.session.laptop}}
     </p>
     <p>
-        At least 5:{{math}}
+        At least 5: {{request.session.math}}
     </p>
     <p>
-        Comment: {{comment}}
+        Comment: {{request.session.comment}}
     </p>
     <button name="return"> <a href="/">Go Back</a></button>
 </body>
