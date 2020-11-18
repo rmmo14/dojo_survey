@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+</head>
+
+<body>
+    <p>Random Word (attempt # {{request.session.counter}})</p>
+    <h2>
+        {{request.session.holder}}
+    </h2>
+    <button><a href="/random_word">Generate</a></button>
+    <button><a href="/random_word/reset">Reset Counter</a></button>
+</body>
+
+</html>

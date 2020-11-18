@@ -18,4 +18,6 @@ from django.urls import path, include
 urlpatterns = [
     path('', include('dojo_survey.urls')),
     path('result', include('dojo_survey.urls')),
+    path('random_word', include('random_word.urls')),
+    path('random_word/reset', include('random_word.urls')),
 ]
