@@ -13,7 +13,9 @@
         {{request.session.holder}}
     </h2>
     <button><a href="/random_word">Generate</a></button>
-    <button><a href="/random_word/reset">Reset Counter</a></button>
+    <form action="/random_word/reset">
+        <button type="submit">Reset</button>
+    </form>
 </body>
 
 </html>
